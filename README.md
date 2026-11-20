@@ -6,7 +6,7 @@ A light and dark theme for [Multica](https://multica.ai/), inspired by two-tone 
 | --- | --- |
 | ![Relay light mode](screenshots/light.png) | ![Relay dark mode](screenshots/dark.png) |
 
-Light mode pairs linen-grey and ivory surfaces with muted brick-red controls. Dark mode pairs graphite with a smoked-green issue title and amber indicators.
+Light mode pairs linen-grey and ivory surfaces with muted burnt-orange controls. Dark mode pairs graphite with a smoked-green issue title and amber indicators. A matte navigation panel, a perforated grille and colour-coded workflow lanes take their cues from Braun radios and Bauhaus graphics.
 
 ## Install
 
@@ -16,10 +16,10 @@ The theme options let you switch the accent to olive and turn off keycap bevels,
 
 ## Source
 
-The theme lives in `manifest.json`, `theme.css` and `images/molded-grain.png`. To build the same importable package, run this from the repository root:
+The theme lives in `manifest.json`, `theme.css` and `images/`. To build the same importable package, run this from the repository root:
 
 ```sh
-zip -X theme.zip manifest.json theme.css images/molded-grain.png
+zip -X theme.zip manifest.json theme.css images/*.png
 ```
 
 To validate the package, run `pnpm theme:check /path/to/theme.zip` from a checkout of [Multica](https://github.com/multica-ai/multica). See the [theme authoring guide](https://github.com/multica-ai/multica/blob/main/docs/theming.md).

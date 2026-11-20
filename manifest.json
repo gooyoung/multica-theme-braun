@@ -2,7 +2,7 @@
   "apiVersion": 1,
   "id": "relay",
   "name": "Relay 灰壳终端",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Linen-grey keycaps by day, smoked glass and amber indicators by night.",
   "options": [
     {
@@ -22,7 +22,7 @@
             "zh-Hans": "出厂配色",
             "zh-Hant": "出廠配色"
           },
-          "swatch": "#8b4137"
+          "swatch": "#a04426"
         },
         {
           "value": "olive",
