@@ -1,18 +1,18 @@
-# Relay 灰壳终端
+# Braun
 
-A light and dark theme for [Multica](https://multica.ai/), inspired by two-tone mechanical keyboards and vintage console hardware.
+An independently maintained light and dark theme for [Multica](https://multica.ai/), inspired by Braun industrial design and vintage console hardware.
 
 | Light · Linen grey | Dark · Graphite |
 | --- | --- |
-| ![Relay light mode](screenshots/light.png) | ![Relay dark mode](screenshots/dark.png) |
+| ![Braun light mode](screenshots/light.png) | ![Braun dark mode](screenshots/dark.png) |
 
 Light mode pairs a satin-grey housing with porcelain-white panels. Dark mode uses graphite and charcoal. Both menus share an olive selection, with orange for primary actions and red for alerts. A recessed readout and perforated grille take their cues from vintage radio hardware.
 
 ## Install
 
-Download [theme.zip](https://github.com/gooyoung/multica-theme-relay/releases/latest/download/theme.zip). In Multica, open **Settings → Appearance → Make your own theme → Import theme** and select the ZIP.
+Download [theme.zip](https://github.com/gooyoung/Braun/releases/latest/download/theme.zip). In Multica, open **Settings → Appearance → Make your own theme → Import theme** and select the ZIP.
 
-The theme options let you switch the accent to olive and turn off keycap bevels, case texture or chassis details.
+Braun uses the theme ID `relay` so Multica recognises earlier installations. The theme options let you switch the accent to olive and turn off keycap bevels, case texture or chassis details.
 
 ## Source
 
