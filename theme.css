@@ -121,11 +121,10 @@
   --relay-active-key: #e2e2cf;
   --relay-detail: #f6f5f0;
   --relay-status-lamp: #657747;
-  --relay-grille-image: url(images/grille-light.png);
   --relay-lane-tint: 4%;
   --relay-lane-mark: 58%;
   --relay-key-face: #3b3a37;
-  --relay-perforation-ink: rgb(43 42 37 / 0.25);
+  --relay-perforation-ink: rgb(39 39 33 / 0.32);
 }
 
 .theme-dark {
@@ -194,11 +193,10 @@
   --relay-active-key: #485141;
   --relay-detail: #242524;
   --relay-status-lamp: #b9c997;
-  --relay-grille-image: url(images/grille-dark.png);
   --relay-lane-tint: 5%;
   --relay-lane-mark: 51%;
   --relay-key-face: #41413c;
-  --relay-perforation-ink: rgb(0 0 0 / 0.72);
+  --relay-perforation-ink: rgb(239 239 233 / 0.16);
 }
 
 :root.theme-light[data-theme-option-signal="olive"] {
@@ -255,19 +253,8 @@
 }
 
 :is([data-mc="app-rail"], [data-mc="window-toolbar"], [data-mc="tab-bar"], [data-mc="bottom-bar"]) {
-  --relay-grain-image: url(images/molded-grain.png);
-  background-image: var(--relay-grain-image);
+  background-image: url(images/molded-grain.png);
   background-repeat: repeat;
-}
-
-/* Keep perforations to the edge of the frame, clear of the rail labels. */
-:root[data-theme-option-chassis-detail] [data-mc="app-rail"] {
-  background-image:
-    radial-gradient(circle at 3px 4px, var(--relay-perforation-ink) 0.7px, transparent 1.2px),
-    var(--relay-grain-image);
-  background-position: left top, left top;
-  background-size: 6px 9px, auto;
-  background-repeat: repeat-y, repeat;
 }
 
 [data-mc="issue-group-header"] {
@@ -460,33 +447,21 @@
   box-shadow: inset 0 1px var(--relay-glint), 0 0 0 1px var(--relay-dark-edge);
 }
 
+/* One perforated surface runs under the frame and its controls. */
+:root[data-theme-option-chassis-detail] {
+  --backdrop: radial-gradient(circle, var(--relay-perforation-ink) 0.75px, transparent 1.35px) 0 0 / 8px 8px;
+  --backdrop-color: var(--app-shell);
+  --frame-glass-opacity: 32%;
+  --frame-glass-blur: 0px;
+  --glass-opacity: 100%;
+  --glass-blur: 0px;
+}
+
 @media (min-width: 768px) {
   :root[data-theme-option-chassis-detail] [data-mc="page"] {
     margin-block-start: 6px;
+    margin-block-end: 8px;
     margin-inline-end: 8px;
     --page-shadow: 0 2px 0 var(--relay-edge), 0 4px 6px var(--relay-dark-edge);
-  }
-
-  :root[data-theme-option-chassis-detail] [data-mc="bottom-bar"] {
-    background-image: var(--relay-grille-image), var(--relay-grain-image);
-    background-size: 128px 12px, auto;
-    background-position: center, left top;
-    background-repeat: no-repeat, repeat;
-  }
-
-  /* Some workspace shells have no status bar. Leave room under the card and
-     paint the same bundled grille on its column, clear of app controls. */
-  :root[data-theme-option-chassis-detail]
-  [data-slot="sidebar-wrapper"]:has(> [data-mc="app-rail"])
-  > div:has(> :is([data-slot="app-shell-card"], [data-slot="main-canvas"])):not(:has(> [data-mc="bottom-bar"])) {
-    --relay-grille-strip: 28px;
-    background-image: var(--relay-grille-image);
-    background-size: 128px 12px;
-    background-position: center bottom 8px;
-    background-repeat: no-repeat;
-  }
-
-  :root[data-theme-option-chassis-detail] [data-mc="page"]:is([data-slot="app-shell-card"], [data-slot="main-canvas"]) {
-    margin-block-end: var(--relay-grille-strip, 0px);
   }
 }

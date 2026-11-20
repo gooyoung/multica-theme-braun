@@ -10,9 +10,11 @@ An independent, Braun-inspired console theme that gives Multica boards the feel 
 
 ## Design
 
-The layout follows the front panel of a vintage radio. The outer frame reads as a chassis, the navigation as a control panel, and the main canvas as the work surface. Fine perforations and a three-slot grille sit along the edges. The flat panels and aligned controls leave room for the board and its tasks.
+The layout follows the front panel of a vintage radio. The outer frame reads as a chassis, the navigation as a control panel, and the main canvas as the work surface. Fine perforations cover the exposed frame, from the navigation rail to the bottom edge. The flat panels and aligned controls leave room for the board and its tasks.
 
 Light mode pairs linen grey with a warm porcelain canvas. Dark mode carries the same hierarchy into graphite and charcoal. Small graphite keycaps and softly raised buttons borrow their feel from the Braun ET 66 calculator.
+
+![Close-up of the perforated lower-left corner in light and dark mode](screenshots/chassis.png)
 
 ## Palette
 
@@ -34,7 +36,7 @@ Switch between burnt orange and olive green under **Settings → Appearance → 
 
 In Multica, open **Settings → Appearance → Make your own theme → Import theme** and select the downloaded ZIP. [Download theme.zip](https://github.com/gooyoung/multica-theme-braun/releases/latest/download/theme.zip)
 
-Multica stores themes and options per browser profile. Import the ZIP in each profile where you use Braun. The theme ID is `braun`, and the ZIP includes the CSS and all of its images. Case texture is built in. **Chassis details** are on by default and show the perforations and grille in the wide workspace layout. **Keycap bevels** can be adjusted independently.
+Multica stores themes and options per browser profile. Import the ZIP in each profile where you use Braun. The theme ID is `braun`, and the ZIP includes the CSS and all of its images. Case texture is built in. **Chassis details** are on by default and show the perforated frame in the wide workspace layout. **Keycap bevels** can be adjusted independently.
 
 ### Previews in the theme manager
 
