@@ -1,0 +1,402 @@
+/* Relay: molded keycaps, a two-tone console shell, and a recessed display. */
+.theme-light,
+.theme-dark {
+  --font-ui: "Avenir Next", "Segoe UI", "Helvetica Neue";
+  --icon-stroke-width: 1.75;
+  --radius: 6px;
+  --page-radius: 9px;
+  --rail-item-radius: 8px;
+  --nav-item-radius: 5px;
+  --nav-item-height: 34px;
+  --nav-item-padding-y: 4px;
+  --button-radius: 5px;
+  --button-radius-sm: 4px;
+  --input-radius: 4px;
+  --card-radius: 6px;
+  --label-radius: 3px;
+  --menu-radius: 7px;
+  --menu-item-radius: 4px;
+  --dialog-radius: 9px;
+  --popover-radius: 7px;
+  --board-column-radius: 7px;
+  --board-card-radius: 5px;
+  --issue-group-header-radius: 3px;
+  --issue-group-header-height: 33px;
+  --issue-row-height: 38px;
+  --h1-weight: 680;
+  --h2-weight: 650;
+  --nav-item-active-background: var(--relay-active-key);
+  --nav-item-active-color: var(--foreground);
+  --nav-item-hover-background: var(--relay-key);
+  --rail-item-hover-background: var(--relay-key);
+  --rail-item-active-background: var(--relay-rail-key);
+  --rail-item-active-color: var(--foreground);
+  --page-border-color: var(--relay-seam);
+  --issue-group-header-background: var(--relay-group);
+  --issue-group-header-hover-background: var(--relay-group-hover);
+  --issue-row-selected-background: var(--surface-selected);
+  --issue-row-identifier-color: var(--muted-foreground);
+  --button-primary: var(--brand);
+  --button-primary-foreground: var(--brand-foreground);
+  --button-primary-border: var(--relay-seam);
+  --switch-checked-background: var(--brand);
+  --switch-checked-thumb: var(--brand-foreground);
+  --switch-unchecked-background: var(--relay-panel);
+  --switch-unchecked-thumb: var(--foreground);
+  --switch-border-color: var(--relay-seam);
+  --display-chip-pressed-background: var(--surface-selected);
+  --display-chip-pressed-color: var(--foreground);
+  --link-color: var(--brand);
+  --mention-color: var(--brand);
+  --link-decoration: underline;
+  --link-underline-offset: 3px;
+}
+
+.theme-light {
+  --app-shell: #c9c5ba;
+  --page-canvas: #eeece4;
+  --surface: #f5f2e9;
+  --surface-raised: #f8f6ee;
+  --surface-hover: #e5e1d6;
+  --surface-selected: #dddcc9;
+  --surface-border: #a7a092;
+  --surface-foreground: #292822;
+  --surface-selected-foreground: #292822;
+  --foreground: #292822;
+  --muted: #e1ded1;
+  --muted-foreground: #49473f;
+  --faint-foreground: #645f52;
+  --primary: #3a3b30;
+  --primary-foreground: #fbf8ef;
+  --accent: #e3dfd2;
+  --accent-foreground: #292822;
+  --border: #c9c3b4;
+  --input: #a49b8a;
+  --ring: #783b32;
+  --sidebar-accent: #d7d4c0;
+  --sidebar-accent-foreground: #292822;
+  --brand: #883e35;
+  --brand-foreground: #fff6e6;
+  --tooltip: #383a30;
+  --tooltip-foreground: #f9f6ed;
+  --success: #4c622f;
+  --info: #3d5a67;
+  --warning: #78541e;
+  --destructive: #943c33;
+  --label-chip-color: #fff6e6;
+  --status-in-progress: #885e23;
+  --status-in-review: #50622f;
+  --status-done: #405e62;
+  --status-blocked: #943c33;
+  --priority-high: #864b2e;
+  --priority-urgent: #963c32;
+  --palette-gray: #635c50;
+  --palette-red: #963c32;
+  --palette-orange: #894f32;
+  --palette-yellow: #795819;
+  --palette-green: #4f612d;
+  --palette-teal: #3c675e;
+  --palette-blue: #3e5e73;
+  --palette-indigo: #53587a;
+  --palette-purple: #674f71;
+  --palette-pink: #844d60;
+  --surface-shadow: 0 1px 2px rgb(58 46 27 / 0.12);
+  --floating-shadow: 0 3px 0 #8b8679, 0 11px 24px rgb(42 39 30 / 0.22);
+  --floating-border-color: #928c7f;
+  --relay-panel: #d6d3c9;
+  --relay-toolbar: #dfdbd1;
+  --relay-seam: #9b9587;
+  --relay-edge: #8c8577;
+  --relay-glint: rgb(255 252 240 / 0.76);
+  --relay-dark-edge: rgb(54 47 34 / 0.26);
+  --relay-key: #e9e5d9;
+  --relay-rail-key: #ddbbad;
+  --relay-active-key: #e2e2cf;
+  --relay-group: #dddad0;
+  --relay-group-hover: #d6d2c8;
+  --relay-detail: #f2efe5;
+  --relay-display: #dee0ce;
+  --relay-display-ink: #2d3528;
+  --relay-display-rule: #929a81;
+  --relay-display-well: #c7cdb9;
+  --relay-status-lamp: #657747;
+  --relay-vent: #827d72;
+  --relay-label-tint: 10%;
+}
+
+.theme-dark {
+  --app-shell: #292c2d;
+  --page-canvas: #1e2224;
+  --surface: #282e2d;
+  --surface-raised: #303635;
+  --surface-hover: #313838;
+  --surface-selected: #3b443b;
+  --surface-border: #505950;
+  --surface-foreground: #ece8db;
+  --surface-selected-foreground: #ece8db;
+  --foreground: #ece8db;
+  --muted: #2b3230;
+  --muted-foreground: #c3c2b4;
+  --faint-foreground: #a5a89c;
+  --primary: #e8e3d2;
+  --primary-foreground: #242823;
+  --accent: #343c38;
+  --accent-foreground: #ece8db;
+  --border: #424b46;
+  --input: #59645d;
+  --ring: #ecc07d;
+  --sidebar-accent: #41493d;
+  --sidebar-accent-foreground: #ece8db;
+  --brand: #e9b76d;
+  --brand-foreground: #302419;
+  --tooltip: #e5ddc5;
+  --tooltip-foreground: #272820;
+  --success: #b0bf8f;
+  --info: #98b8c2;
+  --warning: #e3bb77;
+  --destructive: #eda393;
+  --label-chip-color: #292822;
+  --status-in-progress: #e3be76;
+  --status-in-review: #adc094;
+  --status-done: #9ebebc;
+  --status-blocked: #e89c8b;
+  --priority-high: #e5ac81;
+  --priority-urgent: #eea08e;
+  --palette-gray: #b9b6a4;
+  --palette-red: #eda393;
+  --palette-orange: #e6b18a;
+  --palette-yellow: #e9c47d;
+  --palette-green: #adc094;
+  --palette-teal: #9dc7b6;
+  --palette-blue: #9ebcca;
+  --palette-indigo: #b5b6d0;
+  --palette-purple: #ccafd1;
+  --palette-pink: #d7a8b7;
+  --surface-shadow: 0 1px 2px rgb(0 0 0 / 0.22);
+  --floating-shadow: 0 3px 0 #141817, 0 13px 24px rgb(0 0 0 / 0.42);
+  --floating-border-color: #555e55;
+  --relay-panel: #333736;
+  --relay-toolbar: #383d3b;
+  --relay-seam: #4e5952;
+  --relay-edge: #616b61;
+  --relay-glint: rgb(225 233 210 / 0.17);
+  --relay-dark-edge: rgb(0 0 0 / 0.42);
+  --relay-key: #414844;
+  --relay-rail-key: #514536;
+  --relay-active-key: #485141;
+  --relay-group: #2d3532;
+  --relay-group-hover: #39433e;
+  --relay-detail: #252a2a;
+  --relay-display: #27372d;
+  --relay-display-ink: #d5e1be;
+  --relay-display-rule: #65745f;
+  --relay-display-well: #1d2b23;
+  --relay-status-lamp: #d9b66f;
+  --relay-vent: #101413;
+  --relay-label-tint: 13%;
+}
+
+:root.theme-light[data-theme-option-signal="olive"] {
+  --brand: #4e5e37;
+  --ring: #4e5e37;
+  --relay-active-key: #d7ddc4;
+  --relay-rail-key: #cad0b6;
+}
+
+:root.theme-dark[data-theme-option-signal="olive"] {
+  --brand: #bbcd97;
+  --brand-foreground: #283122;
+  --ring: #bbcd97;
+  --relay-status-lamp: #bbcd97;
+  --relay-rail-key: #424e39;
+}
+
+[data-mc="app-rail"] [aria-current="page"] svg {
+  color: var(--brand);
+}
+
+[data-mc="sidebar"] {
+  background-color: var(--relay-panel);
+  box-shadow: inset -1px 0 var(--relay-glint);
+}
+
+[data-mc="sidebar"] [data-mc="panel-section"] h3 {
+  font-weight: 680;
+}
+
+[data-mc="panel-section"] [data-mc="nav-item"][data-active="true"] {
+  font-weight: 670;
+}
+
+[data-mc="page-header"],
+:is([data-mc="tab-bar"], [data-mc="window-toolbar"]) {
+  background-color: var(--relay-toolbar);
+  border-color: var(--relay-seam);
+  box-shadow: inset 0 1px var(--relay-glint);
+}
+
+[data-mc="window-toolbar"] {
+  background-color: var(--app-shell);
+}
+
+:root[data-theme-option-mold-grain] :is([data-mc="sidebar"], [data-mc="app-rail"], [data-mc="page-header"], [data-mc="window-toolbar"], [data-mc="tab-bar"], [data-mc="bottom-bar"]) {
+  --relay-grain-image: url(images/molded-grain.png);
+  background-image: var(--relay-grain-image);
+  background-repeat: repeat;
+}
+
+[data-mc="issue-group-header"] {
+  box-shadow: inset 0 1px var(--relay-glint), inset 0 -1px var(--relay-seam);
+  color: var(--foreground);
+  font-weight: 680;
+  font-variant-numeric: tabular-nums;
+}
+
+[data-mc="issue-row"] {
+  box-shadow: inset 0 -1px color-mix(in srgb, var(--border) 60%, transparent);
+  font-variant-numeric: tabular-nums;
+}
+
+:is([data-mc="issue-row"][data-selected="true"], [data-mc="inbox-item"][data-selected="true"], [data-mc="palette-item"][data-selected]) {
+  background-color: var(--surface-selected);
+  color: var(--surface-selected-foreground);
+  box-shadow: inset 2px 0 var(--relay-status-lamp), inset 0 -1px var(--relay-seam);
+}
+
+[data-mc="label-chip"] {
+  background-color: color-mix(in srgb, var(--label-color) var(--relay-label-tint), var(--surface));
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--label-color) 45%, var(--border));
+}
+
+[data-mc="label-chip"]::before {
+  content: "";
+  flex: none;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--label-color);
+}
+
+[data-mc="issue-detail"] {
+  --relay-lamp: var(--status-todo);
+  background-color: var(--relay-detail);
+}
+
+[data-mc="issue-detail"][data-status="in_progress"] { --relay-lamp: var(--status-in-progress); }
+[data-mc="issue-detail"][data-status="in_review"] { --relay-lamp: var(--status-in-review); }
+[data-mc="issue-detail"][data-status="done"] { --relay-lamp: var(--status-done); }
+[data-mc="issue-detail"][data-status="blocked"] { --relay-lamp: var(--status-blocked); }
+
+[data-mc="issue-detail"] [data-mc="page-header"] {
+  border-block-end: 1px solid var(--relay-seam);
+  box-shadow: inset 0 1px var(--relay-glint), inset 0 -2px var(--relay-dark-edge);
+  background-color: var(--relay-panel);
+  font-variant-numeric: tabular-nums;
+}
+
+[data-mc="issue-title"] {
+  padding: 10px 13px;
+  color: var(--relay-display-ink);
+  background-color: var(--relay-display);
+  border: 1px solid var(--relay-display-rule);
+  border-radius: 4px;
+  box-shadow: inset 0 2px 3px var(--relay-dark-edge), inset 0 -1px var(--relay-glint), 0 1px 0 var(--relay-glint);
+}
+
+[data-mc="issue-title"] :is([role="button"], [data-slot="textarea"]) {
+  color: inherit;
+  font-weight: 690;
+}
+
+/* The window's lamp repeats the workflow status beside the title. */
+:root[data-theme-option-chassis-detail] [data-mc="issue-detail"] [data-mc="issue-title"] {
+  padding-inline-end: 51px;
+  background-image:
+    radial-gradient(circle, var(--relay-lamp) 0 2px, transparent 2.8px),
+    linear-gradient(var(--relay-display-well), var(--relay-display-well)),
+    linear-gradient(var(--relay-display-rule), var(--relay-display-rule)),
+    linear-gradient(var(--relay-display-rule), var(--relay-display-rule)),
+    linear-gradient(var(--relay-display-rule), var(--relay-display-rule));
+  background-position: right 12px center, right 9px center, right 24px center, right 28px center, right 32px center;
+  background-repeat: no-repeat;
+  background-size: 6px 6px, 12px 18px, 1px 14px, 1px 10px, 1px 6px;
+}
+
+[data-mc="issue-activity"] h2 {
+  font-weight: 680;
+}
+
+:is([data-mc="comment-composer"], [data-mc="chat-input"]) {
+  border-radius: var(--input-radius);
+  box-shadow: inset 0 1px 3px var(--relay-dark-edge), 0 0 0 1px var(--surface-border);
+}
+
+:is([data-mc="comment"][data-author-type="agent"], [data-mc="chat-bubble"], [data-mc="board-column"]) {
+  background-color: var(--muted);
+  box-shadow: inset 0 1px var(--relay-glint);
+}
+
+[data-mc="board-card"] {
+  --board-card-border-color: var(--relay-seam);
+}
+
+[data-mc="unread-dot"] {
+  background-color: var(--brand);
+  box-shadow: 0 0 0 1px var(--relay-dark-edge);
+}
+
+:is([data-slot="input"], [data-slot="select-trigger"], [data-slot="kbd"]) {
+  border-color: var(--relay-seam);
+}
+
+[data-mc="tab"][data-active="true"] {
+  box-shadow: inset 0 -2px var(--relay-status-lamp);
+}
+
+:root[data-theme-option-keycap-relief] :is([data-mc="app-rail"] [aria-current="page"], [data-mc="nav-item"][data-active="true"], [data-slot="button"]:is([data-variant="default"], [data-variant="outline"], [data-variant="brand"]), [data-slot="kbd"]) {
+  box-shadow: inset 0 0 0 1px var(--relay-dark-edge), inset 0 1px var(--relay-glint), inset 0 -3px var(--relay-dark-edge), 0 1px 1px var(--relay-dark-edge);
+}
+
+:root[data-theme-option-keycap-relief] [data-slot="button"]:is([data-variant="default"], [data-variant="outline"], [data-variant="brand"]):active:not(:disabled) {
+  box-shadow: inset 0 0 0 1px var(--relay-dark-edge), inset 0 2px 3px var(--relay-dark-edge);
+}
+
+:root[data-theme-option-keycap-relief] [data-mc="page-header"] [data-slot="button"][data-variant="ghost"]:is([data-size="icon-sm"], [data-size="icon-xs"]) {
+  background-color: var(--relay-key);
+  box-shadow: inset 0 0 0 1px var(--relay-seam), inset 0 1px var(--relay-glint), 0 1px var(--relay-dark-edge);
+}
+
+:root[data-theme-option-keycap-relief] [data-mc="page-header"] [data-slot="button"][data-variant="ghost"]:is([data-size="icon-sm"], [data-size="icon-xs"]):is(:hover, [aria-expanded="true"]) {
+  background-color: var(--relay-active-key);
+}
+
+:root[data-theme-option-chassis-detail] [data-mc="nav-item"][data-active="true"]::after {
+  content: "";
+  flex: none;
+  width: 5px;
+  height: 5px;
+  margin-inline-start: auto;
+  border-radius: 50%;
+  background-color: var(--relay-status-lamp);
+  box-shadow: 0 0 0 1px var(--relay-dark-edge);
+}
+
+@media (min-width: 768px) {
+  :root[data-theme-option-chassis-detail] [data-mc="page"] {
+    margin-block-start: 6px;
+    margin-inline-end: 8px;
+    --page-shadow: 0 2px 0 var(--relay-edge), 0 4px 6px var(--relay-dark-edge);
+  }
+}
+
+@media (min-width: 1180px) {
+  :root[data-theme-option-chassis-detail] [data-mc="bottom-bar"] {
+    background-image:
+      repeating-linear-gradient(90deg, var(--relay-vent) 0 4px, var(--relay-glint) 4px 5px, transparent 5px 9px),
+      var(--relay-grain-image, none);
+    background-size: 92px 7px, auto;
+    background-position: center, left top;
+    background-repeat: no-repeat, repeat;
+  }
+}

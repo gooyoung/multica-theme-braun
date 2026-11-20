@@ -1,0 +1,70 @@
+{
+  "apiVersion": 1,
+  "id": "relay",
+  "name": "Relay 灰壳终端",
+  "version": "1.0.0",
+  "description": "Linen-grey keycaps by day, smoked glass and amber indicators by night.",
+  "options": [
+    {
+      "id": "signal",
+      "type": "select",
+      "label": {
+        "en": "Accent",
+        "zh-Hans": "主控配色",
+        "zh-Hant": "主控配色"
+      },
+      "default": "factory",
+      "choices": [
+        {
+          "value": "factory",
+          "label": {
+            "en": "Factory",
+            "zh-Hans": "出厂配色",
+            "zh-Hant": "出廠配色"
+          },
+          "swatch": "#8b4137"
+        },
+        {
+          "value": "olive",
+          "label": {
+            "en": "Olive",
+            "zh-Hans": "橄榄绿",
+            "zh-Hant": "橄欖綠"
+          },
+          "swatch": "#6f794f"
+        }
+      ]
+    },
+    {
+      "id": "keycap-relief",
+      "type": "toggle",
+      "label": {
+        "en": "Keycap bevels",
+        "zh-Hans": "键帽倒角",
+        "zh-Hant": "鍵帽倒角"
+      },
+      "default": true
+    },
+    {
+      "id": "mold-grain",
+      "type": "toggle",
+      "label": {
+        "en": "Case texture",
+        "zh-Hans": "外壳纹理",
+        "zh-Hant": "外殼紋理"
+      },
+      "default": true
+    },
+    {
+      "id": "chassis-detail",
+      "type": "toggle",
+      "label": {
+        "en": "Chassis details",
+        "zh-Hans": "机壳细节",
+        "zh-Hant": "機殼細節"
+      },
+      "default": true
+    }
+  ],
+  "author": "gooyoung"
+}
