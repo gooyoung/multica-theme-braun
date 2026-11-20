@@ -6,13 +6,15 @@ An independently maintained light and dark theme for [Multica](https://multica.a
 | --- | --- |
 | ![Braun light mode](screenshots/light.png) | ![Braun dark mode](screenshots/dark.png) |
 
-Light mode pairs a satin-grey housing with porcelain-white panels. Dark mode uses graphite and charcoal. Both menus share an olive selection, with brick-red primary controls. A recessed readout, perforated trim and a three-slot grille take their cues from vintage radio hardware. Graphite shortcut keys and pressed-in controls echo the ET 66 keypad.
+Light mode pairs a satin-grey housing with porcelain-white panels. Dark mode uses graphite and charcoal. Both menus share an olive selection, with softly raised brick-red primary controls. Perforated trim and a three-slot grille take their cues from vintage radio hardware. Graphite shortcut keys and pressed-in controls echo the ET 66 keypad.
 
 ## Install
 
 Download [theme.zip](https://github.com/gooyoung/multica-theme-braun/releases/latest/download/theme.zip). In Multica, open **Settings → Appearance → Make your own theme → Import theme** and select the ZIP.
 
 Braun uses the theme ID `relay` so Multica recognises earlier installations. Choose burnt orange or olive green for the switches and indicator lights. The theme options also control keycap bevels, case texture and chassis details.
+
+Multica stores themes and their options in each browser profile. Import the ZIP in each profile where you use Braun. Chassis details are on by default and show the perforations and grille in the wide workspace layout.
 
 ## Source
 
