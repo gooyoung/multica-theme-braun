@@ -38,11 +38,11 @@
   --board-column-background: var(--relay-panel);
   --issue-row-selected-background: var(--surface-selected);
   --issue-row-identifier-color: var(--muted-foreground);
-  --button-primary: var(--relay-action, var(--brand));
-  --button-primary-foreground: var(--relay-action-ink, var(--brand-foreground));
+  --button-primary: #a04426;
+  --button-primary-foreground: #fff9f1;
   --button-primary-border: var(--relay-seam);
-  --switch-checked-background: var(--relay-active-key);
-  --switch-checked-thumb: var(--foreground);
+  --switch-checked-background: var(--relay-signal);
+  --switch-checked-thumb: var(--brand-foreground);
   --switch-unchecked-background: var(--relay-panel);
   --switch-unchecked-thumb: var(--foreground);
   --switch-border-color: var(--relay-seam);
@@ -77,10 +77,9 @@
   --ring: #4e603d;
   --sidebar-accent: var(--relay-active-key);
   --sidebar-accent-foreground: #262724;
-  --brand: #9d471f;
-  --brand-foreground: #fff9f1;
-  --relay-action: #d77837;
-  --relay-action-ink: #21160e;
+  --brand: var(--button-primary);
+  --brand-foreground: var(--button-primary-foreground);
+  --relay-signal: #a55027;
   --tooltip: #30312e;
   --tooltip-foreground: #f9f9f5;
   --success: #4c622f;
@@ -154,8 +153,9 @@
   --ring: #c6d5a7;
   --sidebar-accent: var(--relay-active-key);
   --sidebar-accent-foreground: #efefe9;
-  --brand: #f0ac73;
-  --brand-foreground: #2b1d13;
+  --brand: #f3a391;
+  --brand-foreground: #311c16;
+  --relay-signal: #edad76;
   --tooltip: #e7e8e1;
   --tooltip-foreground: #262726;
   --success: #b0bf8f;
@@ -207,18 +207,11 @@
 }
 
 :root.theme-light[data-theme-option-signal="olive"] {
-  --brand: #4e5e37;
-  --relay-action: var(--brand);
-  --relay-action-ink: var(--brand-foreground);
-  --ring: #4e5e37;
-  --relay-active-key: #d7ddc4;
+  --relay-signal: #5d6d43;
 }
 
 :root.theme-dark[data-theme-option-signal="olive"] {
-  --brand: #bbcd97;
-  --brand-foreground: #283122;
-  --ring: #bbcd97;
-  --relay-status-lamp: #bbcd97;
+  --relay-signal: #aec596;
 }
 
 [data-mc="app-rail"] {
@@ -435,7 +428,7 @@
 }
 
 [data-mc="tab"][data-active="true"] {
-  box-shadow: inset 0 -2px var(--relay-status-lamp);
+  box-shadow: inset 0 -2px var(--relay-signal);
 }
 
 :root[data-theme-option-keycap-relief] :is([data-slot="button"]:is([data-variant="default"], [data-variant="outline"], [data-variant="brand"]), [data-slot="kbd"]) {
@@ -465,7 +458,7 @@
   height: 5px;
   margin-inline-start: auto;
   border-radius: 50%;
-  background-color: var(--relay-status-lamp);
+  background-color: var(--relay-signal);
   box-shadow: 0 0 0 1px var(--relay-dark-edge);
 }
 

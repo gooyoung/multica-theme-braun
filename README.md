@@ -6,13 +6,13 @@ An independently maintained light and dark theme for [Multica](https://multica.a
 | --- | --- |
 | ![Braun light mode](screenshots/light.png) | ![Braun dark mode](screenshots/dark.png) |
 
-Light mode pairs a satin-grey housing with porcelain-white panels. Dark mode uses graphite and charcoal. Both menus share an olive selection, with orange for primary actions and red for alerts. A recessed readout and perforated grille take their cues from vintage radio hardware.
+Light mode pairs a satin-grey housing with porcelain-white panels. Dark mode uses graphite and charcoal. Both menus share an olive selection, with brick-red primary controls. A recessed readout and perforated grille take their cues from vintage radio hardware.
 
 ## Install
 
 Download [theme.zip](https://github.com/gooyoung/Braun/releases/latest/download/theme.zip). In Multica, open **Settings → Appearance → Make your own theme → Import theme** and select the ZIP.
 
-Braun uses the theme ID `relay` so Multica recognises earlier installations. The theme options let you switch the accent to olive and turn off keycap bevels, case texture or chassis details.
+Braun uses the theme ID `relay` so Multica recognises earlier installations. Choose burnt orange or olive green for the switches and indicator lights. The theme options also control keycap bevels, case texture and chassis details.
 
 ## Source
 

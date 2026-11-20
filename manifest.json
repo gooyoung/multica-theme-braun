@@ -2,36 +2,36 @@
   "apiVersion": 1,
   "id": "relay",
   "name": "Braun",
-  "version": "1.2.1",
-  "description": "An industrial Multica theme with porcelain and graphite panels, olive selection, and orange controls.",
+  "version": "1.2.2",
+  "description": "An industrial Multica theme with porcelain and graphite panels, olive selection, and brick-red primary controls.",
   "options": [
     {
       "id": "signal",
       "type": "select",
       "label": {
-        "en": "Accent",
-        "zh-Hans": "主控配色",
-        "zh-Hant": "主控配色"
+        "en": "Control accent",
+        "zh-Hans": "控件点缀色",
+        "zh-Hant": "控制項點綴色"
       },
       "default": "factory",
       "choices": [
         {
           "value": "factory",
           "label": {
-            "en": "Factory",
-            "zh-Hans": "出厂配色",
-            "zh-Hant": "出廠配色"
+            "en": "Burnt orange",
+            "zh-Hans": "氧化橙",
+            "zh-Hant": "氧化橙"
           },
-          "swatch": "#d77837"
+          "swatch": "#a55027"
         },
         {
           "value": "olive",
           "label": {
-            "en": "Olive",
+            "en": "Olive green",
             "zh-Hans": "橄榄绿",
             "zh-Hant": "橄欖綠"
           },
-          "swatch": "#6f794f"
+          "swatch": "#5d6d43"
         }
       ]
     },
