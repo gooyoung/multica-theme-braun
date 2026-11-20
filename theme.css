@@ -6,6 +6,7 @@
   --radius: 6px;
   --page-radius: 9px;
   --rail-item-radius: var(--nav-item-radius);
+  --relay-key-ink: #f3f1e8;
   --nav-item-radius: 5px;
   --nav-item-height: 34px;
   --nav-item-padding-y: 4px;
@@ -56,8 +57,8 @@
 
 .theme-light {
   --app-shell: #d2d1ca;
-  --page-canvas: #f4f4f0;
-  --surface: #fafaf6;
+  --page-canvas: #f3f2ed;
+  --surface: #faf9f5;
   --surface-raised: #fbfbf8;
   --surface-hover: #e8e8e3;
   --surface-selected: #e6e8dd;
@@ -118,7 +119,7 @@
   --relay-dark-edge: rgb(32 34 29 / 0.19);
   --relay-key: #e1e1db;
   --relay-active-key: #e2e2cf;
-  --relay-detail: #f6f6f2;
+  --relay-detail: #f6f5f0;
   --relay-display: #e7e8e3;
   --relay-display-ink: #2b2d28;
   --relay-display-rule: #a0a39a;
@@ -127,12 +128,13 @@
   --relay-grille-image: url(images/grille-light.png);
   --relay-lane-tint: 4%;
   --relay-lane-mark: 58%;
-  --relay-label-tint: 5%;
+  --relay-key-face: #3b3a37;
+  --relay-perforation-ink: rgb(43 42 37 / 0.25);
 }
 
 .theme-dark {
   --app-shell: #242627;
-  --page-canvas: #202223;
+  --page-canvas: #1d1e1e;
   --surface: #292b2c;
   --surface-raised: #303233;
   --surface-hover: #333536;
@@ -185,7 +187,7 @@
   --surface-shadow: 0 1px 2px rgb(0 0 0 / 0.22);
   --floating-shadow: 0 2px 0 #181919, 0 11px 22px rgb(0 0 0 / 0.37);
   --floating-border-color: #555855;
-  --relay-panel: #2c2e2f;
+  --relay-panel: #2b2c2b;
   --relay-panel-rule: #434546;
   --relay-palette-cursor: #3b3d3c;
   --relay-seam: #4d504e;
@@ -194,7 +196,7 @@
   --relay-dark-edge: rgb(0 0 0 / 0.35);
   --relay-key: #3b3d3c;
   --relay-active-key: #485141;
-  --relay-detail: #252728;
+  --relay-detail: #242524;
   --relay-display: #202223;
   --relay-display-ink: #e8e9e1;
   --relay-display-rule: #585e59;
@@ -203,7 +205,8 @@
   --relay-grille-image: url(images/grille-dark.png);
   --relay-lane-tint: 5%;
   --relay-lane-mark: 51%;
-  --relay-label-tint: 7%;
+  --relay-key-face: #41413c;
+  --relay-perforation-ink: rgb(0 0 0 / 0.72);
 }
 
 :root.theme-light[data-theme-option-signal="olive"] {
@@ -263,6 +266,16 @@
   --relay-grain-image: url(images/molded-grain.png);
   background-image: var(--relay-grain-image);
   background-repeat: repeat;
+}
+
+/* Keep perforations to the edge of the frame, clear of the rail labels. */
+:root[data-theme-option-chassis-detail] [data-mc="app-rail"] {
+  background-image:
+    radial-gradient(circle at 3px 4px, var(--relay-perforation-ink) 0.7px, transparent 1.2px),
+    var(--relay-grain-image, none);
+  background-position: left top, left top;
+  background-size: 6px 9px, auto;
+  background-repeat: repeat-y, repeat;
 }
 
 [data-mc="issue-group-header"] {
@@ -339,21 +352,24 @@
   background-color: var(--relay-palette-cursor);
 }
 
-:root[data-theme-option-keycap-relief] [data-mc="command-palette"] [data-slot="kbd"] {
-  box-shadow: inset 0 -1px var(--relay-panel-rule);
+:root[data-theme-option-keycap-relief] [data-slot="kbd"] {
+  background-color: var(--relay-key-face);
+  color: var(--relay-key-ink);
+  border-color: transparent;
+  box-shadow: inset 0 1px var(--relay-glint), inset 0 -2px var(--relay-dark-edge);
 }
 
 [data-mc="label-chip"] {
-  background-color: color-mix(in srgb, var(--label-color) var(--relay-label-tint), var(--surface));
+  background-color: transparent;
   color: var(--foreground);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--label-color) 30%, var(--border));
+  box-shadow: inset 0 0 0 1px var(--border);
 }
 
 [data-mc="label-chip"]::before {
   content: "";
   flex: none;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: var(--label-color);
 }
@@ -420,7 +436,7 @@
 
 [data-mc="unread-dot"] {
   background-color: var(--destructive);
-  box-shadow: 0 0 0 1px var(--relay-dark-edge);
+  box-shadow: inset 0 1px var(--relay-glint), 0 0 0 1px var(--relay-dark-edge);
 }
 
 :is([data-slot="input"], [data-slot="select-trigger"], [data-slot="kbd"]) {
@@ -431,7 +447,7 @@
   box-shadow: inset 0 -2px var(--relay-signal);
 }
 
-:root[data-theme-option-keycap-relief] :is([data-slot="button"]:is([data-variant="default"], [data-variant="outline"], [data-variant="brand"]), [data-slot="kbd"]) {
+:root[data-theme-option-keycap-relief] [data-slot="button"]:is([data-variant="default"], [data-variant="outline"], [data-variant="secondary"], [data-variant="brand"]) {
   box-shadow: inset 0 0 0 1px var(--relay-dark-edge), inset 0 1px var(--relay-glint), inset 0 -2px var(--relay-dark-edge), 0 1px 1px var(--relay-dark-edge);
 }
 
@@ -439,8 +455,13 @@
   box-shadow: inset 0 -1px var(--relay-dark-edge);
 }
 
-:root[data-theme-option-keycap-relief] [data-slot="button"]:is([data-variant="default"], [data-variant="outline"], [data-variant="brand"]):active:not(:disabled) {
-  box-shadow: inset 0 0 0 1px var(--relay-dark-edge), inset 0 2px 3px var(--relay-dark-edge);
+:root[data-theme-option-keycap-relief] [data-slot="button"]:is([data-variant="default"], [data-variant="outline"], [data-variant="secondary"], [data-variant="brand"]):active:not(:disabled, [data-disabled], [aria-disabled="true"]) {
+  box-shadow: inset 0 0 0 1px var(--relay-dark-edge), inset 0 2px 4px var(--relay-dark-edge);
+}
+
+:root[data-theme-option-keycap-relief] [data-slot="button"]:is([data-variant="default"], [data-variant="outline"], [data-variant="secondary"], [data-variant="brand"]):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
 }
 
 :root[data-theme-option-keycap-relief] [data-mc="page-header"] [data-slot="button"][data-variant="ghost"]:is([data-size="icon-sm"], [data-size="icon-xs"]) {
@@ -459,7 +480,7 @@
   margin-inline-start: auto;
   border-radius: 50%;
   background-color: var(--relay-signal);
-  box-shadow: 0 0 0 1px var(--relay-dark-edge);
+  box-shadow: inset 0 1px var(--relay-glint), 0 0 0 1px var(--relay-dark-edge);
 }
 
 @media (min-width: 768px) {

@@ -6,7 +6,7 @@ An independently maintained light and dark theme for [Multica](https://multica.a
 | --- | --- |
 | ![Braun light mode](screenshots/light.png) | ![Braun dark mode](screenshots/dark.png) |
 
-Light mode pairs a satin-grey housing with porcelain-white panels. Dark mode uses graphite and charcoal. Both menus share an olive selection, with brick-red primary controls. A recessed readout and perforated grille take their cues from vintage radio hardware.
+Light mode pairs a satin-grey housing with porcelain-white panels. Dark mode uses graphite and charcoal. Both menus share an olive selection, with brick-red primary controls. A recessed readout, perforated trim and a three-slot grille take their cues from vintage radio hardware. Graphite shortcut keys and pressed-in controls echo the ET 66 keypad.
 
 ## Install
 

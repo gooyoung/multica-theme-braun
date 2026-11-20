@@ -2,7 +2,7 @@
   "apiVersion": 1,
   "id": "relay",
   "name": "Braun",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "An industrial Multica theme with porcelain and graphite panels, olive selection, and brick-red primary controls.",
   "options": [
     {
