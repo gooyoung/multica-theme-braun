@@ -254,7 +254,7 @@
   border-color: var(--relay-panel-rule);
 }
 
-:root[data-theme-option-mold-grain] :is([data-mc="app-rail"], [data-mc="window-toolbar"], [data-mc="tab-bar"], [data-mc="bottom-bar"]) {
+:is([data-mc="app-rail"], [data-mc="window-toolbar"], [data-mc="tab-bar"], [data-mc="bottom-bar"]) {
   --relay-grain-image: url(images/molded-grain.png);
   background-image: var(--relay-grain-image);
   background-repeat: repeat;
@@ -264,7 +264,7 @@
 :root[data-theme-option-chassis-detail] [data-mc="app-rail"] {
   background-image:
     radial-gradient(circle at 3px 4px, var(--relay-perforation-ink) 0.7px, transparent 1.2px),
-    var(--relay-grain-image, none);
+    var(--relay-grain-image);
   background-position: left top, left top;
   background-size: 6px 9px, auto;
   background-repeat: repeat-y, repeat;
@@ -468,7 +468,7 @@
   }
 
   :root[data-theme-option-chassis-detail] [data-mc="bottom-bar"] {
-    background-image: var(--relay-grille-image), var(--relay-grain-image, none);
+    background-image: var(--relay-grille-image), var(--relay-grain-image);
     background-size: 128px 12px, auto;
     background-position: center, left top;
     background-repeat: no-repeat, repeat;

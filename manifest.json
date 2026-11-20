@@ -1,8 +1,8 @@
 {
   "apiVersion": 1,
-  "id": "relay",
+  "id": "braun",
   "name": "Braun",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "An industrial Multica theme with porcelain and graphite panels, olive selection, and brick-red primary controls.",
   "options": [
     {
@@ -42,16 +42,6 @@
         "en": "Keycap bevels",
         "zh-Hans": "键帽倒角",
         "zh-Hant": "鍵帽倒角"
-      },
-      "default": true
-    },
-    {
-      "id": "mold-grain",
-      "type": "toggle",
-      "label": {
-        "en": "Case texture",
-        "zh-Hans": "外壳纹理",
-        "zh-Hant": "外殼紋理"
       },
       "default": true
     },

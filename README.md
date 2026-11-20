@@ -34,9 +34,11 @@ Switch between burnt orange and olive green under **Settings → Appearance → 
 
 In Multica, open **Settings → Appearance → Make your own theme → Import theme** and select the downloaded ZIP. [Download theme.zip](https://github.com/gooyoung/multica-theme-braun/releases/latest/download/theme.zip)
 
-Multica stores themes and options per browser profile. Import the ZIP in each profile where you use Braun. The package includes the theme CSS and every image it needs. **Chassis details** are on by default and show the perforations and grille in the wide workspace layout. **Keycap bevels** and **Case texture** can be adjusted independently.
+Multica stores themes and options per browser profile. Import the ZIP in each profile where you use Braun. The theme ID is `braun`, and the ZIP includes the CSS and all of its images. Case texture is built in. **Chassis details** are on by default and show the perforations and grille in the wide workspace layout. **Keycap bevels** can be adjusted independently.
 
-Braun uses the theme ID `relay` so Multica recognises earlier installations when you import an update.
+### Previews in the theme manager
+
+A ZIP import shows a schematic preview in the current appearance mode. The theme store generates screenshots in both modes and adds a Light/Dark switch to its listing. Once Braun is listed, install it from **Settings → Appearance → Manage** for the store entry. If you already imported Braun with the same theme ID, remove that local copy first to install from the store. [Multica theme store guide](https://github.com/multica-ai/multica-themes/blob/main/CONTRIBUTING.md)
 
 ## Source
 
