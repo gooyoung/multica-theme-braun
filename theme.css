@@ -1,4 +1,4 @@
-/* Relay: a matte Braun-inspired chassis with functional workflow colours. */
+/* Relay: neutral molded panels and colour-coded controls. */
 .theme-light,
 .theme-dark {
   --font-ui: "Avenir Next", "Segoe UI", "Helvetica Neue";
@@ -30,19 +30,19 @@
   --nav-item-active-color: var(--foreground);
   --nav-item-hover-background: var(--relay-key);
   --rail-item-hover-background: var(--relay-key);
-  --rail-item-active-background: var(--relay-rail-key);
-  --rail-item-active-color: var(--foreground);
+  --rail-item-active-background: var(--nav-item-active-background);
+  --rail-item-active-color: var(--nav-item-active-color);
   --page-border-color: var(--relay-seam);
   --issue-group-header-background: var(--relay-panel);
   --issue-group-header-hover-background: var(--surface-hover);
   --board-column-background: var(--relay-panel);
   --issue-row-selected-background: var(--surface-selected);
   --issue-row-identifier-color: var(--muted-foreground);
-  --button-primary: var(--brand);
-  --button-primary-foreground: var(--brand-foreground);
+  --button-primary: var(--relay-action, var(--brand));
+  --button-primary-foreground: var(--relay-action-ink, var(--brand-foreground));
   --button-primary-border: var(--relay-seam);
-  --switch-checked-background: var(--brand);
-  --switch-checked-thumb: var(--brand-foreground);
+  --switch-checked-background: var(--relay-active-key);
+  --switch-checked-thumb: var(--foreground);
   --switch-unchecked-background: var(--relay-panel);
   --switch-unchecked-thumb: var(--foreground);
   --switch-border-color: var(--relay-seam);
@@ -55,46 +55,48 @@
 }
 
 .theme-light {
-  --app-shell: #c9c9c1;
-  --page-canvas: #f5f3eb;
-  --surface: #faf8f1;
-  --surface-raised: #f8f6ee;
-  --surface-hover: #e5e1d6;
-  --surface-selected: #e3e4d7;
-  --surface-border: #b9b2a4;
-  --surface-foreground: #292822;
-  --surface-selected-foreground: #292822;
-  --foreground: #292822;
-  --muted: #e1ded1;
-  --muted-foreground: #49473f;
-  --faint-foreground: #645f52;
-  --primary: #3a3b30;
-  --primary-foreground: #fbf8ef;
-  --accent: #e8e4d9;
-  --accent-foreground: #292822;
-  --border: #c9c3b4;
-  --input: #a49b8a;
-  --ring: #8d4037;
-  --sidebar-accent: #d7d4c0;
-  --sidebar-accent-foreground: #292822;
-  --brand: #a04426;
-  --brand-foreground: #fff6e6;
-  --tooltip: #383a30;
-  --tooltip-foreground: #f9f6ed;
+  --app-shell: #d2d1ca;
+  --page-canvas: #f4f4f0;
+  --surface: #fafaf6;
+  --surface-raised: #fbfbf8;
+  --surface-hover: #e8e8e3;
+  --surface-selected: #e6e8dd;
+  --surface-border: #c0c0b7;
+  --surface-foreground: #262724;
+  --surface-selected-foreground: #262724;
+  --foreground: #262724;
+  --muted: #eaeae5;
+  --muted-foreground: #494a45;
+  --faint-foreground: #62635d;
+  --primary: #30312e;
+  --primary-foreground: #fafaf6;
+  --accent: #e7e7e2;
+  --accent-foreground: #262724;
+  --border: #d5d5ce;
+  --input: #a6a79f;
+  --ring: #4e603d;
+  --sidebar-accent: var(--relay-active-key);
+  --sidebar-accent-foreground: #262724;
+  --brand: #9d471f;
+  --brand-foreground: #fff9f1;
+  --relay-action: #d77837;
+  --relay-action-ink: #21160e;
+  --tooltip: #30312e;
+  --tooltip-foreground: #f9f9f5;
   --success: #4c622f;
   --info: #3d5a67;
-  --warning: #78541e;
-  --destructive: #943c33;
-  --label-chip-color: #fff6e6;
-  --status-backlog: #615d52;
-  --status-todo: #365c73;
-  --status-in-progress: #80591d;
-  --status-in-review: #634e70;
+  --warning: #915020;
+  --destructive: #af2e1b;
+  --label-chip-color: #fcfaf7;
+  --status-backlog: #66685f;
+  --status-todo: #3b4b59;
+  --status-in-progress: #9d471f;
+  --status-in-review: #594d65;
   --status-done: #4e633e;
-  --status-cancelled: #736860;
-  --status-blocked: #943c33;
-  --priority-high: #864b2e;
-  --priority-urgent: #963c32;
+  --status-cancelled: #696963;
+  --status-blocked: #af2e1b;
+  --priority-high: #9d471f;
+  --priority-urgent: #af2e1b;
   --palette-gray: #635c50;
   --palette-red: #963c32;
   --palette-orange: #894f32;
@@ -105,73 +107,71 @@
   --palette-indigo: #53587a;
   --palette-purple: #674f71;
   --palette-pink: #844d60;
-  --surface-shadow: 0 1px 2px rgb(58 46 27 / 0.12);
-  --floating-shadow: 0 3px 0 #8b8679, 0 11px 24px rgb(42 39 30 / 0.22);
-  --floating-border-color: #928c7f;
-  --relay-panel: #edede6;
-  --relay-panel-rule: #cccabf;
-  --relay-palette-cursor: #ebe8dc;
-  --relay-seam: #9b9587;
-  --relay-edge: #8c8577;
-  --relay-glint: rgb(255 252 240 / 0.76);
-  --relay-dark-edge: rgb(54 47 34 / 0.26);
-  --relay-key: #e9e5d9;
-  --relay-rail-face: #d4cfc2;
-  --relay-rail-key: var(--surface);
+  --surface-shadow: 0 1px 2px rgb(28 30 24 / 0.10);
+  --floating-shadow: 0 2px 0 #a1a29a, 0 10px 20px rgb(26 27 21 / 0.15);
+  --floating-border-color: #a8a9a0;
+  --relay-panel: #ecece7;
+  --relay-panel-rule: #cccdc5;
+  --relay-palette-cursor: #e8e9e2;
+  --relay-seam: #a6a79f;
+  --relay-edge: #9b9c95;
+  --relay-glint: rgb(255 255 251 / 0.75);
+  --relay-dark-edge: rgb(32 34 29 / 0.19);
+  --relay-key: #e1e1db;
   --relay-active-key: #e2e2cf;
-  --relay-detail: #f9f6ed;
-  --relay-display: #dee0ce;
-  --relay-display-ink: #2d3528;
-  --relay-display-rule: #929a81;
-  --relay-display-well: #c7cdb9;
+  --relay-detail: #f6f6f2;
+  --relay-display: #e7e8e3;
+  --relay-display-ink: #2b2d28;
+  --relay-display-rule: #a0a39a;
+  --relay-display-well: #d6d8d0;
   --relay-status-lamp: #657747;
   --relay-grille-image: url(images/grille-light.png);
-  --relay-lane-tint: 8%;
-  --relay-lane-mark: 72%;
-  --relay-label-tint: 10%;
+  --relay-lane-tint: 4%;
+  --relay-lane-mark: 58%;
+  --relay-label-tint: 5%;
 }
 
 .theme-dark {
-  --app-shell: #242829;
-  --page-canvas: #202526;
-  --surface: #282e2d;
-  --surface-raised: #303635;
-  --surface-hover: #313838;
-  --surface-selected: #3b443b;
-  --surface-border: #505950;
-  --surface-foreground: #ece8db;
-  --surface-selected-foreground: #ece8db;
-  --foreground: #ece8db;
-  --muted: #2b3230;
-  --muted-foreground: #cac7ba;
-  --faint-foreground: #a5a89c;
-  --primary: #e8e3d2;
-  --primary-foreground: #242823;
-  --accent: #343c38;
-  --accent-foreground: #ece8db;
-  --border: #424b46;
-  --input: #59645d;
-  --ring: #ecc07d;
-  --sidebar-accent: #41493d;
-  --sidebar-accent-foreground: #ece8db;
-  --brand: #efb374;
-  --brand-foreground: #302419;
-  --tooltip: #e5ddc5;
-  --tooltip-foreground: #272820;
+  --app-shell: #242627;
+  --page-canvas: #202223;
+  --surface: #292b2c;
+  --surface-raised: #303233;
+  --surface-hover: #333536;
+  --surface-selected: #383e36;
+  --surface-border: #505352;
+  --surface-foreground: #efefe9;
+  --surface-selected-foreground: #efefe9;
+  --foreground: #efefe9;
+  --muted: #2d2f30;
+  --muted-foreground: #cbccc6;
+  --faint-foreground: #a8aaa3;
+  --primary: #e9e9e2;
+  --primary-foreground: #262829;
+  --accent: #383a3a;
+  --accent-foreground: #efefe9;
+  --border: #404342;
+  --input: #5a5d5b;
+  --ring: #c6d5a7;
+  --sidebar-accent: var(--relay-active-key);
+  --sidebar-accent-foreground: #efefe9;
+  --brand: #f0ac73;
+  --brand-foreground: #2b1d13;
+  --tooltip: #e7e8e1;
+  --tooltip-foreground: #262726;
   --success: #b0bf8f;
   --info: #98b8c2;
-  --warning: #e3bb77;
-  --destructive: #eda393;
-  --label-chip-color: #292822;
-  --status-backlog: #c0bbad;
-  --status-todo: #9cbdd2;
-  --status-in-progress: #e8bf77;
-  --status-in-review: #c9b1d1;
+  --warning: #eda96d;
+  --destructive: #f29886;
+  --label-chip-color: #252624;
+  --status-backlog: #bcbeb6;
+  --status-todo: #a1b7c9;
+  --status-in-progress: #eda96d;
+  --status-in-review: #c8b4d1;
   --status-done: #aec397;
-  --status-cancelled: #b6aaa3;
-  --status-blocked: #e89c8b;
-  --priority-high: #e5ac81;
-  --priority-urgent: #eea08e;
+  --status-cancelled: #b8b8b2;
+  --status-blocked: #f29886;
+  --priority-high: #eda96d;
+  --priority-urgent: #f29886;
   --palette-gray: #b9b6a4;
   --palette-red: #eda393;
   --palette-orange: #e6b18a;
@@ -183,32 +183,33 @@
   --palette-purple: #ccafd1;
   --palette-pink: #d7a8b7;
   --surface-shadow: 0 1px 2px rgb(0 0 0 / 0.22);
-  --floating-shadow: 0 3px 0 #141817, 0 13px 24px rgb(0 0 0 / 0.42);
-  --floating-border-color: #555e55;
-  --relay-panel: #303535;
-  --relay-panel-rule: #454d49;
-  --relay-palette-cursor: #3c4542;
-  --relay-seam: #4e5952;
-  --relay-edge: #616b61;
-  --relay-glint: rgb(225 233 210 / 0.17);
-  --relay-dark-edge: rgb(0 0 0 / 0.42);
-  --relay-key: #414844;
-  --relay-rail-key: #444947;
+  --floating-shadow: 0 2px 0 #181919, 0 11px 22px rgb(0 0 0 / 0.37);
+  --floating-border-color: #555855;
+  --relay-panel: #2c2e2f;
+  --relay-panel-rule: #434546;
+  --relay-palette-cursor: #3b3d3c;
+  --relay-seam: #4d504e;
+  --relay-edge: #606360;
+  --relay-glint: rgb(238 240 230 / 0.14);
+  --relay-dark-edge: rgb(0 0 0 / 0.35);
+  --relay-key: #3b3d3c;
   --relay-active-key: #485141;
-  --relay-detail: #252a2a;
-  --relay-display: #222f2c;
-  --relay-display-ink: #d5e1be;
-  --relay-display-rule: #62796b;
-  --relay-display-well: #1d2b23;
-  --relay-status-lamp: #d9b66f;
+  --relay-detail: #252728;
+  --relay-display: #202223;
+  --relay-display-ink: #e8e9e1;
+  --relay-display-rule: #585e59;
+  --relay-display-well: #191b1b;
+  --relay-status-lamp: #b9c997;
   --relay-grille-image: url(images/grille-dark.png);
-  --relay-lane-tint: 10%;
-  --relay-lane-mark: 64%;
-  --relay-label-tint: 13%;
+  --relay-lane-tint: 5%;
+  --relay-lane-mark: 51%;
+  --relay-label-tint: 7%;
 }
 
 :root.theme-light[data-theme-option-signal="olive"] {
   --brand: #4e5e37;
+  --relay-action: var(--brand);
+  --relay-action-ink: var(--brand-foreground);
   --ring: #4e5e37;
   --relay-active-key: #d7ddc4;
 }
@@ -220,8 +221,8 @@
   --relay-status-lamp: #bbcd97;
 }
 
-.theme-light [data-mc="app-rail"] {
-  background-color: var(--relay-rail-face);
+[data-mc="app-rail"] {
+  background-color: var(--app-shell);
 }
 
 [data-mc="app-rail"] [aria-current="page"] {
@@ -352,7 +353,7 @@
 [data-mc="label-chip"] {
   background-color: color-mix(in srgb, var(--label-color) var(--relay-label-tint), var(--surface));
   color: var(--foreground);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--label-color) 45%, var(--border));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--label-color) 30%, var(--border));
 }
 
 [data-mc="label-chip"]::before {
@@ -425,7 +426,7 @@
 }
 
 [data-mc="unread-dot"] {
-  background-color: var(--brand);
+  background-color: var(--destructive);
   box-shadow: 0 0 0 1px var(--relay-dark-edge);
 }
 
@@ -438,14 +439,10 @@
 }
 
 :root[data-theme-option-keycap-relief] :is([data-slot="button"]:is([data-variant="default"], [data-variant="outline"], [data-variant="brand"]), [data-slot="kbd"]) {
-  box-shadow: inset 0 0 0 1px var(--relay-dark-edge), inset 0 1px var(--relay-glint), inset 0 -3px var(--relay-dark-edge), 0 1px 1px var(--relay-dark-edge);
+  box-shadow: inset 0 0 0 1px var(--relay-dark-edge), inset 0 1px var(--relay-glint), inset 0 -2px var(--relay-dark-edge), 0 1px 1px var(--relay-dark-edge);
 }
 
-:root[data-theme-option-keycap-relief] [data-mc="app-rail"] [aria-current="page"] {
-  box-shadow: inset 0 0 0 1px var(--relay-panel-rule), inset 0 -2px var(--relay-dark-edge), 0 1px 1px var(--relay-dark-edge);
-}
-
-:root[data-theme-option-keycap-relief] :is([data-mc="nav-item"][data-active="true"], [data-mc="settings-page"] [data-slot="list-column"] a[aria-current="page"]) {
+:root[data-theme-option-keycap-relief] :is([data-mc="app-rail"] [aria-current="page"], [data-mc="nav-item"][data-active="true"], [data-mc="settings-page"] [data-slot="list-column"] a[aria-current="page"]) {
   box-shadow: inset 0 -1px var(--relay-dark-edge);
 }
 
