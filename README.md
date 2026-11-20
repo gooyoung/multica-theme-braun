@@ -10,7 +10,7 @@ Light mode pairs a satin-grey housing with porcelain-white panels. Dark mode use
 
 ## Install
 
-Download [theme.zip](https://github.com/gooyoung/Braun/releases/latest/download/theme.zip). In Multica, open **Settings → Appearance → Make your own theme → Import theme** and select the ZIP.
+Download [theme.zip](https://github.com/gooyoung/multica-theme-braun/releases/latest/download/theme.zip). In Multica, open **Settings → Appearance → Make your own theme → Import theme** and select the ZIP.
 
 Braun uses the theme ID `relay` so Multica recognises earlier installations. Choose burnt orange or olive green for the switches and indicator lights. The theme options also control keycap bevels, case texture and chassis details.
 
