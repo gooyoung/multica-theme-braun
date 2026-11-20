@@ -6,7 +6,7 @@ A light and dark theme for [Multica](https://multica.ai/), inspired by two-tone 
 | --- | --- |
 | ![Relay light mode](screenshots/light.png) | ![Relay dark mode](screenshots/dark.png) |
 
-Light mode pairs linen-grey and ivory surfaces with muted burnt-orange controls. Dark mode pairs graphite with a smoked-green issue title and amber indicators. A matte navigation panel, a perforated grille and colour-coded workflow lanes take their cues from Braun radios and Bauhaus graphics.
+Light mode pairs a linen-grey rail and ivory keycaps with muted burnt-orange controls. Dark mode pairs graphite with a smoked-green issue title and amber indicators. A matte navigation panel, a perforated grille and colour-coded workflow lanes take their cues from Braun radios and Bauhaus graphics.
 
 ## Install
 
