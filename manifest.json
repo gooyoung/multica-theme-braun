@@ -2,7 +2,7 @@
   "apiVersion": 1,
   "id": "braun",
   "name": "Braun",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "An industrial Multica theme with porcelain and graphite panels, olive selection, and brick-red primary controls.",
   "options": [
     {
@@ -18,11 +18,11 @@
         {
           "value": "factory",
           "label": {
-            "en": "Burnt orange",
-            "zh-Hans": "氧化橙",
-            "zh-Hant": "氧化橙"
+            "en": "Oxide red",
+            "zh-Hans": "氧化红",
+            "zh-Hant": "氧化紅"
           },
-          "swatch": "#a55027"
+          "swatch": "#c94c48"
         },
         {
           "value": "olive",

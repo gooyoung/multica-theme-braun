@@ -80,7 +80,7 @@
   --sidebar-accent-foreground: #262724;
   --brand: var(--button-primary);
   --brand-foreground: var(--button-primary-foreground);
-  --relay-signal: #a55027;
+  --relay-signal: #c94c48;
   --tooltip: #30312e;
   --tooltip-foreground: #f9f9f5;
   --success: #4c622f;
@@ -152,7 +152,7 @@
   --sidebar-accent-foreground: #efefe9;
   --brand: #f3a391;
   --brand-foreground: #311c16;
-  --relay-signal: #edad76;
+  --relay-signal: #ed9691;
   --tooltip: #e7e8e1;
   --tooltip-foreground: #262726;
   --success: #b0bf8f;

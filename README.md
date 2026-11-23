@@ -27,10 +27,10 @@ Neutrals define the structure so the few colour accents carry a clear purpose.
 | Work surface | Porcelain `#F3F2ED` | Charcoal `#1D1E1E` | Main canvas |
 | Primary action | Brick red `#A04426` | Brick red `#A04426` | Create and submit buttons |
 | Navigation selection | Pale olive `#E2E2CF` | Deep olive `#485141` | Active items in both navigation levels |
-| Burnt orange accent | `#A55027` | `#EDAD76` | Default accent for switches and indicators |
+| Oxide red accent | `#C94C48` | `#ED9691` | Default accent for switches and indicators |
 | Olive green accent | `#5D6D43` | `#AEC596` | Optional accent for the same controls |
 
-Switch between burnt orange and olive green under **Settings → Appearance → Theme options → Control accent**.
+Switch between oxide red and olive green under **Settings → Appearance → Theme options → Control accent**.
 
 ## Install
 
